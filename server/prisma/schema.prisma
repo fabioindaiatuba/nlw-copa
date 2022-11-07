@@ -1,18 +1,17 @@
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
+datasource db {
+  url      = env("DATABASE_URL")
+  provider = "sqlite"
+}
+
 generator client {
   provider = "prisma-client-js"
 }
 
 generator erd {
   provider = "prisma-erd-generator"
-  erdDebug = true
-}
-
-datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
 }
 
 model Pool {
