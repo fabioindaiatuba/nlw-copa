@@ -48,7 +48,7 @@ async function bootstrap() {
       }
     })
 
-    return reply.status(204).send({ title });
+    return reply.code(201).send({ title, code });
   });
 
   await fastify.listen({ 
