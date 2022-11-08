@@ -11,10 +11,12 @@ interface HomeProps {
   poolCount: number;
   guessesCount: number;
   userCount: number;
+  rand: number;
 }
 
 export default function Home(props: HomeProps) {
   const [poolTitle, setPoolTitle] = useState("");
+  console.log(props.rand);
 
   async function createPool(event: FormEvent) {
     event.preventDefault();
@@ -108,7 +110,7 @@ export default function Home(props: HomeProps) {
   )
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const [poolCountResponse, guessesCountResponse, userCountResponse] = await Promise.all([
     api.get("/pools/count"),
     api.get("guesses/count"),
@@ -120,6 +122,8 @@ export const getServerSideProps = async () => {
       poolCount: poolCountResponse.data.count,
       guessesCount: guessesCountResponse.data.count,
       userCount: userCountResponse.data.count,
-    }
+      rand: poolCountResponse.data.rand,
+    },
+    revalidate: 10
   }
 }

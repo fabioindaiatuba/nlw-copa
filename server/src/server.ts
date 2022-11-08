@@ -20,7 +20,8 @@ async function bootstrap() {
 
   fastify.get("/pools/count", async () => {
     const count = await prisma.pool.count()
-    return { count };
+    const rand = Math.random();
+    return { count, rand };
   });
 
   fastify.get("/users/count", async () => {
@@ -30,6 +31,7 @@ async function bootstrap() {
 
   fastify.get("/guesses/count", async () => {
     const count = await prisma.guess.count()
+    
     return { count };
   });
 
