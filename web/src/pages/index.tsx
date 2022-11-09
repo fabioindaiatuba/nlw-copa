@@ -105,6 +105,7 @@ export default function Home(props: HomeProps) {
         src={appPreviewImg}
         alt="Dois celulares exibindo uma prévia da aplicação nlw móvel"
         quality={100}
+        priority
       />
     </div>
   )
@@ -112,7 +113,7 @@ export default function Home(props: HomeProps) {
 
 export const getStaticProps = async () => {
   const [poolCountResponse, guessesCountResponse, userCountResponse] = await Promise.all([
-    api.get("/pools/count"),
+    api.get("pools/count"),
     api.get("guesses/count"),
     api.get("users/count"),
   ]);
