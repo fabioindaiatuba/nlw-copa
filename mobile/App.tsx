@@ -26,7 +26,7 @@ export default function App() {
       <AuthContextPropvider>
         <StatusBar barStyle='light-content' backgroundColor="transparent" translucent />
         {fontsLoaded ? (
-          <Pools />
+          <SignIn />
         ) : (
           <Loading />
         )}

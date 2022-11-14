@@ -1,0 +1,29 @@
+GET {{url}}/users/count HTTP/1.1
+Content-Type: application/json
+
+###
+POST {{url}}/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "access_token": "{{access_token}}"
+}
+
+###
+GET {{url}}/me HTTP/1.1
+Content-Type: application/json
+Authorization: bearer {{token}}
+
+###
+GET {{url}}/pools/count HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{url}}/guesses/count HTTP/1.1
+Content-Type: application/json
+
+###
+GET {{url}}/guesses/count HTTP/1.1
+Content-Type: application/json
+
+###

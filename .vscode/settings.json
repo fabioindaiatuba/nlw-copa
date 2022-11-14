@@ -1,0 +1,19 @@
+{
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/bin": true,
+    "**/obj": true
+  },
+
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "url": "http://127.0.0.1:3333",
+      "access_token": "ya29.a0AeTM1ifc1o4hVXvbsFR5xLcyIdpF0gVD1i4AQohEFqzVq0lP7-J2KJKQDx527JMuY8XV11xnB7nQGEksY0NHjW7H1jGA7Hdf-ZjAsMqv1hVYz3MY6tL0XX4Wy55LijiaQDFDT0f10TjAzXgSBBAfcK8zPeBGcwaCgYKAeESARESFQHWtWOmRklxqQLmVhO5oSsAw6vC5Q0165",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRmFiaW8gR29uw6dhbHZlcyIsImF2YXRhclVybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FMbTV3dTFmNGNhdU9IMzZ3azJ1WXJNa1lSU3ZKOWpNNjJaRWE3NDlCUGc3PXM5Ni1jIiwic3ViIjoiY2xhaDgwcTl4MDAwMHI1eDZsajc3NjNibiIsImlhdCI6MTY2ODQ1NzM0NSwiZXhwIjoxNjY5MDYyMTQ1fQ.XA9u0ilPnjDod9521EZJCAvvQ4X4BSOVe819PsmMFgo"
+    }
+  }
+}
